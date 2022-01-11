@@ -1,0 +1,25 @@
+// Auteurs : Frejoux Gaetan & Niord Mathieu
+
+pour(vertical, 1, 10);
+    
+    Deplace(GAUCHE, 1);
+    
+    Ecrire;
+    Ligne(BAS, 10);
+    Lever;
+    
+    Deplace(HAUT, 10);
+
+fin pour;
+
+pour(horizontal, 1, 10);
+    
+    Deplace(BAS, 1);
+    
+    Ecrire;
+    Ligne(GAUCHE, 10);
+    Lever;
+    
+    Deplace(DROITE, 10);
+
+fin pour;

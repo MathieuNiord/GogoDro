@@ -1,0 +1,18 @@
+Ecrire;
+Rectangle(5, 5);
+Lever;
+
+Deplace(droite, 2);
+Couleur(BLEU);
+
+Ecrire;
+Ligne(bas, 4);
+Lever;
+
+Deplace(gauche, 2);
+Deplace(haut, 2);
+Couleur(ROUGE);
+
+Ecrire;
+Ligne(droite, 4);
+Lever;
