@@ -1,0 +1,123 @@
+// Auteur : Niord Mathieu
+
+#CHEMIN /../Results/others_results/
+#NOM BipBop
+
+Couleur(VERT);
+
+nombre x <- 130;
+nombre y <- 125;
+nombre test <- -5; // Pour tester que le "-" est correctement pris en compte
+
+
+// === CORPS ===
+Rectangle(x, y);
+#SAUVER State_01_corpse
+
+
+// === TETE ===
+Deplacer(HAUT, test*(-13)); // Pour tester que le "-" est correctement pris en compte
+Cercle(x);
+#SAUVER State_02_head
+
+
+// === ANTENNES ===
+
+Deplacer(HAUT, 15);
+
+Deplacer(GAUCHE, x/3);
+Rectangle(5, 100);
+Deplacer(HAUT, 50);
+Cercle(5);
+Deplacer(BAS, 50);
+
+Deplacer(DROITE, (x/3)*2);
+Rectangle(5, 100);
+Deplacer(HAUT, 50);
+Cercle(5);
+
+Deplacer(BAS, 50);
+
+Deplacer(GAUCHE, x/3);
+
+#SAUVER State_03_antennas
+
+
+// === YEUX ===
+
+Couleur(NOIR);
+
+Deplacer(BAS, 2);
+Deplacer(GAUCHE, 40);
+Cercle(10);
+
+Deplacer(DROITE, 40*2);
+Cercle(10);
+
+Deplacer(GAUCHE, 40);
+
+// Séparation tête corps
+Deplacer(BAS, 40);
+Rectangle(x, 5);
+
+#SAUVER State_04_wireless
+
+
+// === BRAS ===
+nombre arm_x <- 22;
+nombre arm_y <- 65;
+nombre espace <- arm_x/2 + 5;
+Couleur(VERT);
+
+// Placement
+Deplacer(BAS, 25);
+Deplacer(GAUCHE, (x/2) + espace);
+
+// Bras gauche
+Rectangle(arm_x, arm_y);
+Deplacer(BAS, arm_y/2);
+Cercle(arm_x);
+Deplacer(HAUT, arm_y);
+Cercle(arm_x);
+Deplacer(BAS, arm_y/2);
+
+// Placement
+Deplacer(DROITE, x + (arm_x/2) + (espace) + 5);
+
+// Bras droit
+Rectangle(arm_x, arm_y);
+Deplacer(BAS, arm_y/2);
+Cercle(arm_x);
+Deplacer(HAUT, arm_y);
+Cercle(arm_x);
+Deplacer(BAS, arm_y/2);
+
+#SAUVER State_05_armed
+
+// Placement au centre du corps
+Centrer;
+
+
+// === JAMBES ===
+
+nombre leg_x <- 25;
+nombre leg_y <- 30;
+
+// Placement
+Deplacer(BAS, y * 0.5);
+
+// Jambe gauche
+Deplacer(GAUCHE, x/3.5);
+Rectangle(leg_x, leg_y);
+Deplacer(BAS, leg_y/2);
+Cercle(leg_x);
+Deplacer(HAUT, leg_y/2);
+
+// Placement
+Deplacer(DROITE, x/(3.5/2));
+
+// Jambe droite
+Rectangle(leg_x, leg_y);
+Deplacer(BAS, leg_y/2);
+Cercle(leg_x);
+Deplacer(HAUT, leg_y);

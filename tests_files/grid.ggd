@@ -1,0 +1,36 @@
+// Auteurs : Frejoux Gaetan & Niord Mathieu
+
+#CHEMIN /../Results/grid_result/
+#NOM grid
+
+nombre len <- 100;
+nombre space <- 10;
+nombre nb_line <- 10;
+
+// D'abord on se place dans un coin du quadrillage pour centrer le résultat
+Deplacer(HAUT, len/2);
+Deplacer(GAUCHE, len/2);
+
+pour(vertical, 0, nb_line);
+    
+    Ecrire;
+    Ligne(BAS, len);
+    Lever;
+    
+    Deplacer(HAUT, len);
+	Deplacer(DROITE, space);
+
+fin pour;
+
+Deplacer(GAUCHE, space);
+
+pour(horizontal, 0, nb_line);
+    
+    Ecrire;
+    Ligne(GAUCHE, len);
+    Lever;
+    
+    Deplacer(DROITE, len);
+	Deplacer(BAS, space);
+
+fin pour;

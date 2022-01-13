@@ -1,0 +1,23 @@
+// Auteurs : Frejoux Gaetan & Niord Mathieu
+
+#CHEMIN /../Results/rect_result/
+#NOM rect_cross
+
+nombre size <- 100;
+nombre marging <- 5;	// C'est simplement pour le style
+
+// Carré d'aire 100 * 100, centré sur la position initiale
+Rectangle(size, size);
+
+// Le crayon se déplace jusqu'au bord gauche
+// puis de 5 sur la droite
+Deplacer(GAUCHE, (size/2) - marging);
+Couleur(VIOLET);						// Changement de couleur
+
+Ligne(DROITE, size - (marging * 2));
+
+Deplacer(HAUT, size/2 - marging);
+Deplacer(GAUCHE, size/2 - marging);
+Couleur(ROUGE);
+
+Ligne(BAS, size - (marging * 2));
