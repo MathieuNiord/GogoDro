@@ -9,7 +9,7 @@ Technologies : Flex, Yacc et C++.
 
 INFORMATIONS :
 
-    Nous sommes allés jusqu'à l'exrcice 5. Un makefile est fourni dans le répertoire, lancez la commande make help pour
+    Un makefile est fourni dans le répertoire, lancez la commande make help pour
     voir l'ensemble des commandes proposées.
 
     Trois fichiers de test sont fournis dans le répertoire "tests_files/".
